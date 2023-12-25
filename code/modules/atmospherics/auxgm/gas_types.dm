@@ -6,6 +6,10 @@ Gas definition template
  id = GAS_ChemicalSymbol Gas unique identifier
 specific_heat = X Amount of heat required to raise one gram of the substance by one degree.
 name = "gasname" String containing the gas oxidation_temperature
+oxidation_temperature = X WHAT DOES THIS DO?
+powermix = X WHAT DOES THIS DO?
+heat_penalty = X WHAT DOES THIS DO?
+transmit_modifier = X WHAT DOES THIS DO?
 */
 
 //Defines oxygen gas. This is a box with the properties of oxygen in it. LIST WHAT USES THIS.//
