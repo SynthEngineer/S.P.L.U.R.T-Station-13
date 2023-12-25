@@ -1,3 +1,14 @@
+/*
+Gas definition template
+
+
+/datum/gas/Gas_Name  This defines the datum name and location.
+ id = GAS_ChemicalSymbol Gas unique identifier
+specific_heat = X Amount of heat required to raise one gram of the substance by one degree.
+name = "gasname" String containing the gas oxidation_temperature
+*/
+
+//Defines oxygen gas. This is a box with the properties of oxygen in it. LIST WHAT USES THIS.//
 /datum/gas/oxygen
 	id = GAS_O2
 	specific_heat = 20
@@ -7,9 +18,11 @@
 	heat_penalty = 1
 	transmit_modifier = 1.5
 
+//This function generates a new oxygen datum and returns it. LIST WHAT USES THIS. LIST WHAT THIS USES + oxygen datum//
 /datum/gas/oxygen/generate_TLV()
 	return new/datum/tlv(16, 19, 40, 50)
 
+//Defines nitrogen gas. This is a box that contains the properties of nitrogen. LIST WHAT USES THIS.
 /datum/gas/nitrogen
 	id = GAS_N2
 	specific_heat = 20
@@ -30,6 +43,7 @@
 		)
 	)
 
+//Defines carbon_dioxide gas. This is a box that contains the properties of carbon dioxide. LIST WHAT USES THIS.
 /datum/gas/carbon_dioxide //what the fuck is this?
 	id = GAS_CO2
 	specific_heat = 30
@@ -51,9 +65,11 @@
 	fusion_power = 3
 	enthalpy = -393500
 
+//This function generates a new instance of carbon dioxide gas then returns it. LIST WHAT THIS IS REFERENCED BY.//
 /datum/gas/carbon_dioxide/generate_TLV()
 	return new/datum/tlv(-1, -1, 5, 10)
 
+//This defines plasma. In this case plasma acts like a gas. This is a box that contains the properties of plasma. LIST WHAT THIS IS USED BY.//
 /datum/gas/plasma
 	id = GAS_PLASMA
 	specific_heat = 200
@@ -69,6 +85,7 @@
 	fire_products = FIRE_PRODUCT_PLASMA
 	enthalpy = FIRE_PLASMA_ENERGY_RELEASED // 3000000, 3 megajoules, 3000 kj
 
+//This defines nitrous oxide gas. This is a box that contains the properties of nitrous oxide gas. LIST WHAT REFERENCES THIS.//
 /datum/gas/nitrous_oxide
 	id = GAS_NITROUS
 	specific_heat = 40
@@ -82,6 +99,7 @@
 	enthalpy = 81600
 	heat_resistance = 6
 
+//This defines water_vapor. This is a box that contains the properties of water vapour. LIST WHAT REFERENCES THIS.//
 /datum/gas/water_vapor
 	id = GAS_H2O
 	specific_heat = 40
@@ -95,7 +113,7 @@
 	powermix = 1
 	breath_reagent = /datum/reagent/water
 
-
+//This defines pluoxium. This is a box that contains the properties of pluoxium. LIST WHAT REFETENCES THIS//
 /datum/gas/pluoxium
 	id = GAS_PLUOXIUM
 	specific_heat = 80
@@ -110,6 +128,7 @@
 	heat_resistance = 3
 	price = 6
 
+//This function generates a new instance of pluoxium gas then returns it. LIST WHAT THIS REFERENCES + pluoxium gas definition(This file), LIST WHAT REFERENCES THIS.//
 /datum/gas/pluoxium/generate_TLV()
 	return new/datum/tlv(-1, -1, 5, 6)
 
